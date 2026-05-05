@@ -170,6 +170,7 @@ h1 {
 }
 /* #endregion */
 
+/* #region task-5 */
 .widget {
   display: flex;
   flex-direction: column;
@@ -186,3 +187,61 @@ h1 {
 .color {
   font-weight: 600;
 }
+/* #endregion */
+
+/* #region task-6 */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 32px;
+  border-radius: 8px;
+  background-color: #f6f6fe;
+}
+
+#controls input {
+  width: 150px;
+}
+
+#controls button[data-destroy] {
+  background-color: #ff4e4e;
+}
+
+#controls button[data-destroy]:hover,
+#controls button[data-destroy]:focus {
+  background-color: #ff7070;
+}
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 20px;
+  }
+
+  .gallery {
+    gap: 16px;
+  }
+
+  .gallery li {
+    flex-basis: 100%;
+  }
+
+  #controls {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #controls input {
+    width: 100%;
+  }
+}
+/* #endregion */
