@@ -25,18 +25,19 @@ const images = [
   }
 ];
 
-const refs = {
-  galleryList: document.querySelector('.gallery')
-};
+const galleryList = document.querySelector('.gallery');
 
-const createGalleryCard = cardInfo => {
-  return `
-  <li>
-  <img src="${cardInfo.url}" alt="${cardInfo.alt}">
-  </li>
-  `;
-};
+const fragment = document.createDocumentFragment();
 
-const galleryCardsTemplate = images.map(card => createGalleryCard(card)).join('');
-refs.galleryList.insertAdjacentHTML('beforeend', galleryCardsTemplate)
+images.forEach(({ url, alt }) => {
+  const li = document.createElement('li');
+  const img = document.createElement('img');
 
+  img.src = url;
+  img.alt = alt;
+
+  li.append(img);
+  fragment.append(li);
+});
+
+galleryList.append(fragment);
