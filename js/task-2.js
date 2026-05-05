@@ -24,3 +24,19 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+const refs = {
+  galleryList: document.querySelector('.gallery')
+};
+
+const createGalleryCard = cardInfo => {
+  return `
+  <li>
+  <img src="${cardInfo.url}" alt="${cardInfo.alt}">
+  </li>
+  `;
+};
+
+const galleryCardsTemplate = images.map(card => createGalleryCard(card)).join('');
+refs.galleryList.insertAdjacentHTML('beforeend', galleryCardsTemplate)
+
