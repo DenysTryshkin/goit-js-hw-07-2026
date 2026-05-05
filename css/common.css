@@ -37,12 +37,54 @@ img {
   max-width: 100%;
 }
 
+button,
+input {
+  font: inherit;
+}
+
+button {
+  min-width: 86px;
+  height: 40px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #6c8cff;
+}
+
+input {
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  color: #2e2f42;
+  outline: transparent;
+  transition: border-color 200ms ease;
+}
+
+input:hover {
+  border-color: #000000;
+}
+
+input:focus {
+  border-color: #4e75ff;
+}
+
 /* #region task-1 */
 #categories {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 392px;
+  width: min(392px, 100%);
 }
 
 #categories .item {
@@ -88,5 +130,21 @@ img {
   width: 100%;
   height: 300px;
   object-fit: cover;
+}
+/* #endregion */
+
+/* #region task-3 */
+#name-input {
+  display: block;
+  width: min(360px, 100%);
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
 }
 /* #endregion */
