@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -77,6 +79,10 @@ input:hover {
 
 input:focus {
   border-color: #4e75ff;
+}
+
+body>p:first-of-type {
+  margin-bottom: 24px;
 }
 
 /* #region task-1 */
