@@ -148,3 +148,24 @@ h1 {
   letter-spacing: 0.04em;
 }
 /* #endregion */
+
+/* #region task-4 */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: min(360px, 100%);
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #2e2f42;
+  letter-spacing: 0.04em;
+}
+
+.login-form button {
+  align-self: flex-start;
+}
+/* #endregion */
